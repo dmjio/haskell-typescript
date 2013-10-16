@@ -1,7 +1,7 @@
 name:                haskell-typescript
 version:             0.1.0.1
 synopsis:            Simple TypeScript API
--- description:
+description:         Simple Bindings to the TypeScript compiler
 license:             GPL-3
 license-file:        LICENSE
 author:              David Johnson
@@ -18,3 +18,7 @@ library
       base      >= 4    && <= 5
     , process   >= 1.1  && <= 1.2
   hs-source-dirs:      src
+
+source-repository head
+  type:     git
+  location: git://github.com/dmjio/haskell-typescript.git
