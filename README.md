@@ -44,7 +44,7 @@ $ ghc Main.hs && ./Main
 [1 of 1] Compiling Main             ( Main.hs, Main.o )
 Linking Main ...
 ExitSuccess
-$ cat js/test.js
+$ cat examples/js/test.js
 ```
 
 ```javascript
