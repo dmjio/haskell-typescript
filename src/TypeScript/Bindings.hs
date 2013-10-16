@@ -15,7 +15,7 @@ import           System.Process      (rawSystem, readProcess)
 -- | The TypeScript data structure
 data TypeScript = TypeScript
     { customCompiler :: Maybe FilePath -- ^ Custom compiler path, set to Nothing for default
-    }
+    } deriving (Show)
 
 -- | Compile .ts file(s)
 typeScriptCompile :: [FilePath] -- ^ List of .ts files to compile
@@ -25,7 +25,7 @@ typeScriptCompile :: [FilePath] -- ^ List of .ts files to compile
 typeScriptCompile [] _ _ = return $ ExitFailure 1
 typeScriptCompile files output typeScript =
     rawSystem (getCompiler typeScript) args
-  where args = outputPath output ++ [] ++ files
+  where args = outputPath output ++ files
 
 -- | Get the version of the typescript binary
 typeScriptVersion :: TypeScript -> IO String
@@ -33,7 +33,7 @@ typeScriptVersion t = head . lines <$> typeScriptRead t ["-v"]
 
 -- | Print the TypeScript output
 typeScriptPrint :: FilePath -> TypeScript -> IO String
-typeScriptPrint file t = typeScriptRead t $ ["-v", file]
+typeScriptPrint file t = typeScriptRead t ["-v", file]
 
 outputPath :: Maybe FilePath -> [FilePath]
 outputPath (Just path) = ["-outDir", path]
