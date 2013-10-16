@@ -40,7 +40,7 @@ main = typeScriptCompile ["test.ts"] (Just "js") config
 ```
 
 ```text
-$ ghc Main.hs && ./Main
+$ cd examples && ghc Main.hs && ./Main
 [1 of 1] Compiling Main             ( Main.hs, Main.o )
 Linking Main ...
 ExitSuccess
