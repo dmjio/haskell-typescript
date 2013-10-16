@@ -1,5 +1,5 @@
 name:                haskell-typescript
-version:             0.1.0.1
+version:             0.1.0.0
 synopsis:            Simple TypeScript API
 description:         Simple Bindings to the TypeScript compiler
 license:             GPL-3
