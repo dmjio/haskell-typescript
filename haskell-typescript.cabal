@@ -5,7 +5,7 @@ description:         Simple Bindings to the TypeScript compiler
 license:             GPL-3
 license-file:        LICENSE
 author:              David Johnson
-maintainer:          djohnson.m@gmail.com
+maintainer:          code@dmj.io
 copyright:           Copyright (C) 2013 David Johnson
 category:            Language
 build-type:          Simple
